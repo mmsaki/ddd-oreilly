@@ -2,8 +2,11 @@
 
 1. Code Problem 1:
     - Add a "Apple Pencil to a cart"
-    > **Note**: Please do not create User class
-    > **Note**: Please do not create ProductCategory, Brand, Varian, Colour, etc classess
+    ---
+    **Note**: Please do not create User class
+    Please do not create ProductCategory, Brand, Varian, Colour, etc classess
+    
+    ---
 
 1. Code Problem 2:
     - Add a "Sony Wireless headphone" to a Cart
