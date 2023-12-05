@@ -6,7 +6,6 @@ import json
 
 class Cart:
   cart = []
-  items = []
   
   def __init__(self):
     pass
@@ -17,9 +16,6 @@ class Cart:
   
   def get_products(self):
     return self.cart
-
-  def get_items(self):
-    return self.items
 
   def __repr__(self):
     if self.cart and len(self.cart) == 1:
