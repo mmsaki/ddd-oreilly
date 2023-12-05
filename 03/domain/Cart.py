@@ -12,7 +12,7 @@ class Cart:
 
   def add(self, product: Optional[Product] = None, item: Optional[Item] = None):
     if product: return self.cart.append(product)
-    if item: return self.items.append()
+    if item: return self.items.append(item)
   
   def get_products(self):
     return self.cart
