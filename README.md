@@ -34,8 +34,8 @@
    stdout:
 
    ```sh
-   Cart = Cart{products=["Apple Pencil", "Sony Wireless headphone"]}
-   products = ['Apple Pencil', 'Sony Wireless headphone']
+   Cart = Cart([Product('Apple Pencil'), Product('Sony Wireless headphone')])
+   products = [Product('Apple Pencil'), Product('Sony Wireless headphone')]
    ```
 
 1. Code Problem 3:
