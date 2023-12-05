@@ -10,3 +10,6 @@ class Item:
 
   def __repr__(self):
     return  f"Item(product={self.product}, quantity={self.quantity})"
+    
+  def get_product(self):
+    return self.product
