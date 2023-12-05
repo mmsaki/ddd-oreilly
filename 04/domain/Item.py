@@ -8,6 +8,9 @@ class Item:
     self.product = product
     self.quantity = quantity
 
+  def get_product(self):
+    return self.product
+
   def __repr__(self):
     return  f"Item(product={self.product}, quantity={self.quantity})"
 
