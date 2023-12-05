@@ -8,7 +8,7 @@ class Cart:
     pass
 
   def add(self, item: Item):
-    if item: return self.cart.append(item)
+    self.cart.append(item)
 
   def remove(self, item: Item):
     product = item.product
