@@ -1,4 +1,3 @@
-from domain.Product import Product
 from domain.Item import Item
 
 class Cart:
@@ -7,11 +6,10 @@ class Cart:
   def __init__(self):
     pass
 
-  def add(self, product: Product, item: Item):
-    if product: return self.cart.append(product)
+  def add(self, item: Item):
     if item: return self.items.append(item)
   
-  def get_products(self):
+  def get_items(self):
     return self.cart
 
   def __repr__(self):
