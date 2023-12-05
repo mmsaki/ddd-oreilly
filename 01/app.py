@@ -6,5 +6,5 @@ product = Product(name="Apple Pencil")
 cart.add(product)
 
 
-print(cart.get_products())
+print(cart)
   

@@ -9,6 +9,6 @@ class Product:
   def get_item(self):
     return self.name
 
-  def __repl__(self):
-    return "Product{" + "name='" + self.product + '\'' + '}'
+  def __repr__(self):
+    return f"Product(\'{self.name}\')"
 

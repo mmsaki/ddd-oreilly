@@ -20,7 +20,7 @@
    stdout:
 
    ```sh
-   Cart{products='Apple Pencil'}
+   Cart([Product('Apple Pencil')])
    ```
 
 1. Code Problem 2:
