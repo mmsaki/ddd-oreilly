@@ -1,8 +1,5 @@
 from domain.Product import Product
 from domain.Item import Item
-from typing import Optional
-
-import json
 
 class Cart:
   cart = []
@@ -10,11 +7,10 @@ class Cart:
   def __init__(self):
     pass
 
-  def add(self, product: Optional[Product] = None, item: Optional[Item] = None):
-    if product: return self.cart.append(product)
-    if item: return self.items.append(item)
+  def add(self, item: Item):
+    if item: return self.cart.append(item)
 
-  def remove(self, product: Optional[Product] = None, item: Optional[Item] = None):
+  def remove(self, item: Item):
     if item:
       product = item.product
       quantity = item.quantity

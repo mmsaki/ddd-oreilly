@@ -1,4 +1,3 @@
-import json
 from domain.Product import Product
 
 class Item:
