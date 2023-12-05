@@ -21,5 +21,9 @@
 
    - Add a "Sony Wireless headphone" to a Cart
 
+   ```sh
+   python 02/app.py
+   ```
+
 1. Code Problem 3:
    - Add 2 quality of "Apple Pencil" to a cart
