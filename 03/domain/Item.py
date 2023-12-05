@@ -10,4 +10,4 @@ class Item:
     self.quantity = quantity
 
   def __repr__(self):
-    return  f"Item(\'{self.product}\',\'{self.quantity}\')"
+    return  f"Item(product={self.product}, quantity={self.quantity})"
