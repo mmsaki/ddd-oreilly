@@ -13,7 +13,7 @@ apple_pencil_item = Item(product=apple_pencil, quantity=2)
 cart.add(apple_pencil_item)
 
 
-products = cart.get_products()
+products = cart.get_items()
 
 print("Cart =", cart)
 print("products =", products)
