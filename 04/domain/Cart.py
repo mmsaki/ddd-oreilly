@@ -15,7 +15,11 @@ class Cart:
     quantity = item.quantity
     for i, v in enumerate(self.cart):
       if v.product == product:
-        self.cart[i] -= quantity
+        if self.cart[i].quantity >= quantity:
+          self.cart[i] -= quantity
+        else:
+          # raise ValueError("Cannot remove more items than is present in the cart")
+          return
         if self.cart[i].quantity == 0 and len(self.cart[i:]) == 1:
           self.cart = self.cart[:i]
         elif self.cart[i].quantity == 0 and len(self.cart[i:]) > 1:
