@@ -1,7 +1,5 @@
 from domain.Product import Product
 
-import json
-
 class Cart:
   cart = []
   
