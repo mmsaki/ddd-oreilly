@@ -71,3 +71,31 @@
    2.After Removing Apple Pencil with 2 quantity
       Cart([Item(product=Product(Sony Wireless headphone), quantity=1)])
    ```
+
+1. Code Problem 5:
+
+   -
+
+   ```sh
+   python 05/app.py
+   ```
+
+   stdout:
+
+   ```sh
+   1.Cart Items
+   ----------
+   Cart(
+   items=[Item(product=Product(Sony Wireless headphone), quantity=1), Item(product=Product(Apple Pencil), quantity=2)],
+   events=[ItemAddedToCartEvent(Product(Sony Wireless headphone)), ItemAddedToCartEvent(Product(Apple Pencil))]
+   )
+   2.After Removing Apple Pencil with 2 quantity
+   -------------------------------------------
+   Cart(
+   items=[Item(product=Product(Sony Wireless headphone), quantity=1)],
+   events=[ItemAddedToCartEvent(Product(Sony Wireless headphone)), ItemAddedToCartEvent(Product(Apple Pencil)), ItemRemovedFromCartEvent(Product(Apple Pencil))]
+   )
+   3.Removed Items
+   -------------
+   [Product(Apple Pencil)]
+   ```
