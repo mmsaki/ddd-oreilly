@@ -1,11 +1,14 @@
 import json
 
 class Product:
-  product = ""
+  name = ""
 
   def __init__(self, name: str):
-    self.product = name
+    self.name = name
 
   def get_item(self):
-    return self.product
+    return self.name
+
+  def __repl__(self):
+    return "Product{" + "name='" + self.product + '\'' + '}'
 

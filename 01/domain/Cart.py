@@ -9,10 +9,10 @@ class Cart:
     pass
 
   def add(self, item: Product):
-    self.cart.append(item.product)
+    self.cart.append(item.name)
   
   def get_products(self):
     if self.cart and len(self.cart) == 1:
-      return "".join(self.cart)
+      return "Cart{" + "products='" + "".join(self.cart) + "\'}"
     else:
-      return ", ".join(self.cart[0:-1]) + " and " + self.cart[-1]
+      return "Cart{" + "products=" + json.dumps(self.cart) + '}'
