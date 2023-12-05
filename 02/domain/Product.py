@@ -8,4 +8,4 @@ class Product:
     return self.name
 
   def __repr__(self):
-    return f"Product(\'{self.name}\')"
+    return f"Product({self.name})"
