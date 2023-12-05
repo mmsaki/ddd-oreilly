@@ -39,4 +39,16 @@
    ```
 
 1. Code Problem 3:
+
    - Add 2 quality of "Apple Pencil" to a cart
+
+   ```sh
+   python 03/app.py
+   ```
+
+   stdout:
+
+   ```sh
+   Cart = Cart([Item('Product('Sony Wireless headphone')','1'), Item('Product('Apple Pencil')','2')])
+   products = [Item('Product('Sony Wireless headphone')','1'), Item('Product('Apple Pencil')','2')]
+   ```
