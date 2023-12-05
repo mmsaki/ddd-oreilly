@@ -21,7 +21,7 @@ class Cart:
         elif self.cart[i].quantity == 0 and len(self.cart[i:]) > 1:
           self.cart = self.cart[:i] + self.cart[i+1:]
   
-  def get_products(self):
+  def get_items(self):
     return self.cart
 
   def __repr__(self):

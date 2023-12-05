@@ -12,23 +12,17 @@ apple_pencil = Product(name="Apple Pencil")
 apple_pencil_item = Item(product=apple_pencil, quantity=2)
 cart.add(apple_pencil_item)
 
-products = cart.get_products()
+products = cart.get_items()
 
-print("------------------------------------------------")
-print("Cart =", cart)
-print("products =", products)
-print("------------------------------------------------")
+print("Cart Before =", cart)
 
 apple_pencil_1 = Product(name="Apple Pencil")
 apple_pencil_item_1 = Item(product=apple_pencil_1, quantity=2)
 cart.remove(item=apple_pencil_item_1)
 
-products = cart.get_products()
+products = cart.get_items()
 
-print("------------------------------------------------")
-print("Cart =", cart)
-print("products =", products)
-print("------------------------------------------------")
+print("Cart After  =", cart)
 
 
 
