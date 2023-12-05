@@ -58,3 +58,16 @@
 1. Code Problem 4:
 
    - Remove already added Item “Apple Pencil” (with its all quantities) from Cart.
+
+   ```sh
+   python 04/app.py
+   ```
+
+   stdout:
+
+   ```sh
+   1.Cart Items
+      Cart([Item(product=Product(Sony Wireless headphone), quantity=1), Item(product=Product(Apple Pencil), quantity=2)])
+   2.After Removing Apple Pencil with 2 quantity
+      Cart([Item(product=Product(Sony Wireless headphone), quantity=1)])
+   ```

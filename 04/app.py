@@ -14,7 +14,7 @@ cart.add(apple_pencil_item)
 
 products = cart.get_items()
 
-print("Cart Items\n", cart)
+print("1.Cart Items\n", cart)
 
 apple_pencil_1 = Product(name="Apple Pencil")
 apple_pencil_item_1 = Item(product=apple_pencil_1, quantity=2)
@@ -22,7 +22,7 @@ cart.remove(item=apple_pencil_item_1)
 
 products = cart.get_items()
 
-print("After Removing Apple Pencil with 2 quantity\n", cart)
+print("2.After Removing Apple Pencil with 2 quantity\n", cart)
 
 
 
