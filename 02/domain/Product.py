@@ -7,5 +7,5 @@ class Product:
     self.name = name
 
   def __repr__(self):
-    return  "Product{name='" + self.name + + '\'' + '}'
+    return  "Product{name='" + self.name + "\'" + '}'
 
