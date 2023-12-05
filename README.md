@@ -1,5 +1,7 @@
 # ddd-oreilly
 
+[Session Slides](https://on24static.akamaized.net/event/43/73/19/4/rt/1/documents/resourceList1700586153020/dddbootcamp98221121700586153020.pdf)
+
 1. Code Problem 1:
 
    - Add a "Apple Pencil to a cart"
