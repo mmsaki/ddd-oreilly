@@ -42,7 +42,7 @@
 
 1. Code Problem 3:
 
-   - Add 2 quality of "Apple Pencil" to a cart
+   - Add 2 quantity of "Apple Pencil" to a cart
 
    ```sh
    python 03/app.py
@@ -54,3 +54,7 @@
    Cart = Cart([Item('Product('Sony Wireless headphone')','1'), Item('Product('Apple Pencil')','2')])
    products = [Item('Product('Sony Wireless headphone')','1'), Item('Product('Apple Pencil')','2')]
    ```
+
+1. Code Problem 4:
+
+   - Remove already added Item “Apple Pencil” (with its all quantities) from Cart.
