@@ -30,7 +30,4 @@ class Cart:
     return self.cart
 
   def __repr__(self):
-    if self.cart and len(self.cart) == 1:
-      return f"Cart({self.cart})"
-    else:
-      return  f"Cart({self.cart})"
+    return  f"Cart({self.cart})"
