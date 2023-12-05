@@ -17,12 +17,25 @@
    python 01/app.py
    ```
 
+   stdout:
+
+   ```sh
+   Cart{products='Apple Pencil'}
+   ```
+
 1. Code Problem 2:
 
    - Add a "Sony Wireless headphone" to a Cart
 
    ```sh
    python 02/app.py
+   ```
+
+   stdout:
+
+   ```sh
+   Cart = Cart{products=["Apple Pencil", "Sony Wireless headphone"]}
+   products = ['Apple Pencil', 'Sony Wireless headphone']
    ```
 
 1. Code Problem 3:

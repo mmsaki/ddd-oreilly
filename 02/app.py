@@ -12,6 +12,6 @@ cart.add(headphone)
 
 products = cart.get_products()
 
-print("Cart = ", cart)
-print("products = ", products)
+print("Cart =", cart)
+print("products =", products)
   
