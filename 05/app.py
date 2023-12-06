@@ -24,8 +24,3 @@ products = cart.get_items()
 
 print("2.Removed Items =", cart.get_removed_product_names())
 print(cart)
-
-
-
-
-  

@@ -22,25 +22,31 @@ class Cart:
     
 
   def remove(self, item: Item):
-    product = item.product
-    quantity = item.quantity
-    for i, v in enumerate(self.items):
-      if v.product == product:
-        if self.items[i].quantity >= quantity:
-          self.items[i] -= quantity
-          event = ItemRemovedFromCartEvent(item)
-          self.events.append(event)
-        else:
-          # raise ValueError("Cannot remove more items than is present in the items")
-          return
-        if self.items[i].quantity == 0 and len(self.items[i:]) == 1:
-          self.items = self.items[:i]
-        elif self.items[i].quantity == 0 and len(self.items[i:]) > 1:
-          self.items = self.items[:i] + self.items[i+1:]
+    event = ItemRemovedFromCartEvent(item)
+    self.apply(event)
 
-  def apply(self, event: ItemAddedToCartEvent):
+
+  def apply(self, event):
     self.events.append(event)
-    self.items.append(event.item)
+
+    if isinstance(event, ItemAddedToCartEvent):
+      self.items.append(event.item)
+
+    if isinstance(event, ItemRemovedFromCartEvent):
+      product = event.item.product
+      quantity = event.item.quantity
+      for i, v in enumerate(self.items):
+        if v.product == product:
+          if self.items[i].quantity >= quantity:
+            self.items[i] -= quantity
+            event = ItemRemovedFromCartEvent(event.item)
+          else:
+            # raise ValueError("Cannot remove more items than is present in the items")
+            return
+          if self.items[i].quantity == 0 and len(self.items[i:]) == 1:
+            self.items = self.items[:i]
+          elif self.items[i].quantity == 0 and len(self.items[i:]) > 1:
+            self.items = self.items[:i] + self.items[i+1:]
 
   def get_removed_product_names(self):
     items = []
