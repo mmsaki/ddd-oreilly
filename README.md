@@ -74,7 +74,9 @@
 
 1. Code Problem 5:
 
-   -
+   - As a business User, I would like to know which Products (Product’s names) were removed from Cart.
+
+   > Note:
 
    ```sh
    python 05/app.py
