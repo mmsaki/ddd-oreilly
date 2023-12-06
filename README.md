@@ -76,7 +76,7 @@
 
    - As a business User, I would like to know which Products (Product’s names) were removed from Cart.
 
-   > Note:
+   > Note: Please do not create business User class. You could have a method on Cart class or some other class, which returns list of Products names which were removed from Cart.
 
    ```sh
    python 05/app.py
