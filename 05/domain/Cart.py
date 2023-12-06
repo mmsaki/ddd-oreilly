@@ -1,6 +1,6 @@
-from domain.Product import Product
 from domain.Item import Item
 from events.ItemAddedToCartEvent import ItemAddedToCartEvent
+from domain.Product import Product
 from events.ItemRemovedFromCartEvent import ItemRemovedFromCartEvent
 
 class Cart:
@@ -29,17 +29,17 @@ class Cart:
   def apply(self, event):
     self.events.append(event)
 
+    product = event.item.product
+    quantity = event.item.quantity
+
     if isinstance(event, ItemAddedToCartEvent):
       self.items.append(event.item)
 
     if isinstance(event, ItemRemovedFromCartEvent):
-      product = event.item.product
-      quantity = event.item.quantity
       for i, v in enumerate(self.items):
         if v.product == product:
           if self.items[i].quantity >= quantity:
-            self.items[i] -= quantity
-            event = ItemRemovedFromCartEvent(event.item)
+            self.items[i] - quantity
           else:
             # raise ValueError("Cannot remove more items than is present in the items")
             return
@@ -49,8 +49,4 @@ class Cart:
             self.items = self.items[:i] + self.items[i+1:]
 
   def get_removed_product_names(self):
-    items = []
-    for e in self.events:
-      if isinstance(e, ItemRemovedFromCartEvent):
-        items.append(e.item)
-    return items
+    return [event.item for event in self.events if isinstance(event, ItemRemovedFromCartEvent)]
