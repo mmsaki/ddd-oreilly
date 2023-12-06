@@ -2,18 +2,16 @@ from events.DomainEvent import DomainEvent
 from domain.Item import Item
 
 class ItemAddedToCartEvent(DomainEvent):
-  product = ""
-  quantity = 0
+  item = None
 
-  def item_added_to_cart(self, item: Item):
-    self.product = item.product
-    self.quantity = item.quantity
+  def __init__(self, item: Item):
+    self.item = item
 
   def get_product(self):
-    return self.product
+    return self.item.product
 
   def get_quantity(self):
-    return self.quantity
+    return self.item.quantity
 
   def __repr__(self):
-    return f"ItemAddedToCartEvent({self.product})"
+    return f"ItemAddedToCartEvent({self.item})"

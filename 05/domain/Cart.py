@@ -17,10 +17,9 @@ class Cart:
     return self.items
 
   def add(self, item: Item):
-    self.items.append(item)
-    event = ItemAddedToCartEvent()
-    event.item_added_to_cart(item)
-    self.events.append(event)
+    event = ItemAddedToCartEvent(item)
+    self.apply(event)
+    
 
   def remove(self, item: Item):
     product = item.product
@@ -29,10 +28,8 @@ class Cart:
       if v.product == product:
         if self.items[i].quantity >= quantity:
           self.items[i] -= quantity
-          event = ItemRemovedFromCartEvent()
-          event.item_removed_from_cart(item)
+          event = ItemRemovedFromCartEvent(item)
           self.events.append(event)
-
         else:
           # raise ValueError("Cannot remove more items than is present in the items")
           return
@@ -41,9 +38,13 @@ class Cart:
         elif self.items[i].quantity == 0 and len(self.items[i:]) > 1:
           self.items = self.items[:i] + self.items[i+1:]
 
+  def apply(self, event: ItemAddedToCartEvent):
+    self.events.append(event)
+    self.items.append(event.item)
+
   def get_removed_product_names(self):
     items = []
     for e in self.events:
       if isinstance(e, ItemRemovedFromCartEvent):
-        items.append(e.product)
+        items.append(e.item)
     return items
