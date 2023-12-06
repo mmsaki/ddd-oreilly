@@ -83,19 +83,13 @@
    stdout:
 
    ```sh
-   1.Cart Items
-   ----------
-   Cart(
+   1.Cart Items = Cart(
    items=[Item(product=Product(Sony Wireless headphone), quantity=1), Item(product=Product(Apple Pencil), quantity=2)],
-   events=[ItemAddedToCartEvent(Product(Sony Wireless headphone)), ItemAddedToCartEvent(Product(Apple Pencil))]
+   events=[ItemAddedToCartEvent(Item(product=Product(Sony Wireless headphone), quantity=1)), ItemAddedToCartEvent(Item(product=Product(Apple Pencil), quantity=2))]
    )
-   2.After Removing Apple Pencil with 2 quantity
-   -------------------------------------------
+   2.Removed Items = [Item(product=Product(Apple Pencil), quantity=2)]
    Cart(
    items=[Item(product=Product(Sony Wireless headphone), quantity=1)],
-   events=[ItemAddedToCartEvent(Product(Sony Wireless headphone)), ItemAddedToCartEvent(Product(Apple Pencil)), ItemRemovedFromCartEvent(Product(Apple Pencil))]
+   events=[ItemAddedToCartEvent(Item(product=Product(Sony Wireless headphone), quantity=1)), ItemAddedToCartEvent(Item(product=Product(Apple Pencil), quantity=0)), ItemRemovedFromCartEvent(Item(product=Product(Apple Pencil), quantity=2))]
    )
-   3.Removed Items
-   -------------
-   [Product(Apple Pencil)]
    ```
